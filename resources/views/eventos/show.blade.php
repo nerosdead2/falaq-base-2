@@ -43,6 +43,9 @@
                         <span>Status: <span class="badge bg-success">{{ $pergunta->status }}</span></span>
                         <span>{{ $pergunta->created_at->format('d/m/Y H:i') }}</span>
                     </div>
+                    <div>
+                        {{ $pergunta->user->name ?? 'Anônimo' }}
+                    </div>
                 </div>
             </div>
         @empty
