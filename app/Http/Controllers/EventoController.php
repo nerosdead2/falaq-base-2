@@ -41,6 +41,7 @@ class EventoController extends Controller
             'user_id' => Auth::user()->id,
             'texto'     => $request->input('texto'),
             'status'    => 'pendente',
+            'is_public' => true
         ]);
 
         return redirect()->route('eventos.show', $evento->id)
